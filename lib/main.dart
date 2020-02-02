@@ -16,28 +16,20 @@ class MyApp extends StatelessWidget {
           children: <Widget>[
             Expanded(
               child: GestureDetector(
-                onTapDown: (details) => print('outer tap down'),
-                onTapUp: (details) => print('outer tap down'),
-                onTap: () => print('outer tap'),
-                child: GestureDetector(
-                  onTapDown: (details) => print('inner tap down'),
-                  onTapUp: (details) => print('inner tap up'),
-                  onTap: () => print('inner tap'),
-                  child: Container(
-                    decoration: BoxDecoration(),
-                  ),
-                ),
+                onTapDown: (tdd) => print('TD2'),
               ),
             ),
             Expanded(
               child: GestureDetector(
-                onTapDown: (details) => print('outer tap down'),
-                onTapUp: (details) => print('outer tap down'),
-                onTap: () => print('outer tap'),
-                child: GestureDetector(
-                  onTapDown: (details) => print('inner tap down'),
-                  onTapUp: (details) => print('inner tap up'),
-                  onTap: () => print('inner tap'),
+                onTapDown: (tdd) => print('TD2'),
+                child: Container(),
+              ),
+            ),
+            Expanded(
+              child: GestureDetector(
+                onTapDown: (tdd) => print('TD2'),
+                child: Container(
+                  decoration: BoxDecoration(),
                 ),
               ),
             ),
